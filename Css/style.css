@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;  /*Fuente de toda la página*/
 }
 
 .navbar.bg-body-tertiary {
@@ -8,31 +8,31 @@ body {
 
 .navbar-brand {
     margin-left: 50px;
-    color: white !important; /* Cambia el color del texto a blanco */
+    color: white !important; /* Cambia el color del texto junto a la imagen del menú a blanco */
 }
 
 #bot:hover{
-    color: black !important;
+    color: black !important; /*Al pasarse por encima de la palabra esta cambia su color, es la palabra que está en verde del menú*/
 }
 
-/* Cambiar el color de los enlaces de navegación */
+
 .navbar .nav-link{
-    color: rgb(124, 124, 124);
+    color: rgb(124, 124, 124); /*Color de los elementos de la barra del menú*/
 }
 
 .navbar .nav-link:hover{
-    color: white;
+    color: white;          /*Al pasarse por encima de las palabras del menú estas cambian su color a blanco*/
 }
 
 .row.row-cols-1.row-cols-md-3.g-4{
-    margin: 160px;
+    margin: 160px;                     /*Para achichar el margen de las cartas*/
 }
 
 footer{
-    color: white !important;
+    color: white !important;            /*Cambia el color de los elementos del footer a blanco*/
 }
 
 a.nav-link:hover{
-    color: black;
+    color: black;                  /*Al pasar por arriba de los elementos del footer estos cambian a color negro*/
 }
 
