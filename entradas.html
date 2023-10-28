@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comprar entradas</title>
+        <link href="Css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Css/fotos/codoacodo.png" alt="Logo" width="120" height="60">
+                    Conf Bs As
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-left: 30%; justify-content: space-between;">
+                    <div class="navbar-nav" style="text-align: right;">
+                        <a class="nav-link" href="index.html">La conferencia</a>
+                        <a class="nav-link" href="index.html">Los oradores</a>
+                        <a class="nav-link" href="index.html">El lugar y la fecha</a>
+                        <a class="nav-link" href="index.html">Conviértete en orador</a>
+                        <a class="nav-link" href="entradas.html" style="color: green;" id="bot">Comprar tickets</a>                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+    
+            <div class="d-flex" style="justify-content: center;text-align: center; margin-top: 20px;">
+                <div class="card border border-2 border-primary flex-1 m-2" style="max-width: 18rem;">
+                    <div class="card-body text-primary">
+                        <h5 class="card-title" style="color: black;"><b>Estudiante</b></h5>
+                        <p class="card-text" style="color: black;">Tienen un descuento</p>
+                        <p class="card-text" style="color: black;"><b>80%</b></p>
+                        <p class="card-text" style="color: gray;font-size: 13px;">*presentar documentación</p>
+                    </div>
+                </div>
+        
+                <div class="card border border-2 border-success flex-1 m-2" style="max-width: 18rem;">
+                    <div class="card-body text-success">
+                        <h5 class="card-title" style="color: black;"><b>Trainee</b></h5>
+                        <p class="card-text" style="color: black;">Tienen un descuento</p>
+                        <p class="card-text" style="color: black;"><b>50%</b></p>
+                        <p class="card-text" style="color: gray; font-size: 13px;">*presentar documentación</p>
+                    </div>
+                </div>
+        
+                <div class="card border border-2 border-warning flex-1 m-2" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class= "card-title"><b>Junior</b></h5>
+                        <p class="card-text">Tienen un descuento</p>
+                        <p class="card-text"><b>15%</b></p>
+                        <p class="card-text" style="color: gray;font-size: 13px;">*presentar documentación</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <p style="text-align: center; color: rgb(43, 40, 40);">VENTA</p>
+                    <p style="text-align: center; font-size: 30px; margin-top: -20px;"><B>VALOR DE TICKET $200</B></p>
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="cantidadEntradas" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="cantidadEntradas" placeholder="Cantidad" aria-label="Cantidad">
+                            </div>
+                            <div class="col">
+                                <label for="categoria" class="form-label">Categoria</label>
+                                <select class="form-select" id="categoria">
+                                    <option value="1">Estudiante</option>
+                                    <option value="2">Trainee</option>
+                                    <option value="3">Junior</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="totalAPagar" style="background-color: lightblue; padding: 10px; text-align: center; border-radius: 5px;">
+                            <h3 style="color: rgb(28, 28, 117); font-size: 15px; text-align: left;">Total a pagar: $</h3>
+                        </div>
+                        
+                        
+                        <br>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <button class="botonBorrar" id="botonBorrar" type="reset" style="background-color: rgb(136, 199, 42); border-color: rgb(136, 199, 42); max-width: 300px; width: 100%; height: 40px; color: white; border-radius: 5px; border-color: greenyellow;">Borrar</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="botonResumen" id="botonResumen" style="background-color: rgb(136, 199, 42); border-color: rgb(136, 199, 42); max-width: 300px; width: 100%; height: 40px; color: white; border-radius: 5px; border-color: greenyellow;">Resumen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="container-fluid" style="background-color: rgb(28, 63, 77); height: 80px; display: flex; justify-content: center; align-items: center;">
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link" href="#">Preguntas frecuentes</a>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#">Contáctanos</a>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#">Prensa</a>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#" style="margin-left: -20px;">Conferencias</a>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#">Términos y condiciones</a>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#">Privacidad</a>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#">Estudiantes</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            // Obtengo los elementos del dom
+            const cantidadInput = document.getElementById('cantidadEntradas');
+            const categoriaSelect = document.getElementById('categoria');
+            const totalAPagar = document.getElementById('totalAPagar');
+            const botonResumen = document.getElementById('botonResumen');
+        
+            // Evento click en el botón "Resumen"
+            botonResumen.addEventListener('click', () => {
+                // Obtengo la cantidad de entradas y la categoría seleccionada
+                const cantidad = parseInt(cantidadInput.value);
+                const categoria = parseInt(categoriaSelect.value);
+        
+                // Defino el precio de la entrada y aplico el descuento
+                let precioBase = 200;
+                switch (categoria) {
+                    case 1:
+                        precioBase = precioBase - (precioBase  * 0.8);  // Precio para estudiantes
+                        break;
+                    case 2:
+                        precioBase = precioBase - (precioBase  * 0.5); // Precio para trainees
+                        break;
+                    case 3:
+                        precioBase = ((precioBase  * 0.15) - precioBase)*-1; // Precio para junior
+                        break;
+                }
+        
+                // Calculo el total dependiendo de la cantidad de entrada que pidio
+                const total = cantidad * precioBase;
+        
+                // Mostrar el total en el elemento "totalAPagar"
+                totalAPagar.innerHTML = `<h3 style="color: rgb(28, 28, 117); font-size: 15px; text-align: left;">Total a pagar: $${total}</h3>`;
+            });
+        </script>
+
+    </body>
+</html>
