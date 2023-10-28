@@ -101,7 +101,7 @@
 
                         <div class="row mb-3">
                             <div class="col">
-                                <button class="botonBorrar" id="botonBorrar" type="reset" style="background-color: rgb(136, 199, 42); border-color: rgb(136, 199, 42); max-width: 300px; width: 100%; height: 40px; color: white; border-radius: 5px; border-color: greenyellow;">Borrar</button>
+                                <button class="botonBorrar" id="botonBorrar" type="button" style="background-color: rgb(136, 199, 42); border-color: rgb(136, 199, 42); max-width: 300px; width: 100%; height: 40px; color: white; border-radius: 5px; border-color: greenyellow;">Borrar</button>
                             </div>
                             <div class="col">
                                 <button type="button" class="botonResumen" id="botonResumen" style="background-color: rgb(136, 199, 42); border-color: rgb(136, 199, 42); max-width: 300px; width: 100%; height: 40px; color: white; border-radius: 5px; border-color: greenyellow;">Resumen</button>
@@ -147,6 +147,7 @@
             const categoriaSelect = document.getElementById('categoria');
             const totalAPagar = document.getElementById('totalAPagar');
             const botonResumen = document.getElementById('botonResumen');
+            const botonBorrar = document.getElementById('botonBorrar');
         
             // Evento click en el botón "Resumen"
             botonResumen.addEventListener('click', () => {
@@ -174,6 +175,16 @@
                 // Mostrar el total en el elemento "totalAPagar"
                 totalAPagar.innerHTML = `<h3 style="color: rgb(28, 28, 117); font-size: 15px; text-align: left;">Total a pagar: $${total}</h3>`;
             });
+
+            // Evento click en el botón "Borrar"
+            botonBorrar.addEventListener('click', () => {
+                //Restablezco la cantidad y la categoría seleccionada
+                cantidadInput.value = "";
+                categoriaSelect.value = "1";
+
+            // Reiniciar el precio total a cero
+                totalAPagar.innerHTML = `<h3 style="color: rgb(28, 28, 117); font-size: 15px; text-align: left;">Total a pagar: $0</h3>`;
+        });
         </script>
 
     </body>
